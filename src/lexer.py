@@ -11,4 +11,4 @@ class Lexer:
         self.source_code = source_code
     
     def lex(self):
-        
+        print(self.source_code)
