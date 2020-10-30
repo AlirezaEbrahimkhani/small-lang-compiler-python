@@ -1,0 +1,2 @@
+var ali = 2;
+print ali;
