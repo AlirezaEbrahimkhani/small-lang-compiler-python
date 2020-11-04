@@ -1,3 +1,5 @@
+import re
+from PeekableStream import PeekableStream
 class Lexer:
     
      # Define all regex
