@@ -1,0 +1,7 @@
+procedure mult (i : in integer , j : in integer , result : out integer)
+begin
+result := i * j;
+return;
+end;
+
+call mult( 1 , 5 );

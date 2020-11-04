@@ -1,0 +1,2 @@
+const x , y , z = 4;
+var message , name : string;

@@ -1,0 +1,8 @@
+procedure sum (i : in integer, sum : out integer)
+begin
+sum := 0;
+var s : integer;
+for s :=  0 to i do
+sum := sum  + i;
+return;
+end;

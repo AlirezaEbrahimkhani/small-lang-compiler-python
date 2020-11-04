@@ -1,0 +1,7 @@
+
+procedure scan (i : in integer , j : out string)
+begin 
+const x = 9;
+j := i * x;
+return;
+end;

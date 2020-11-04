@@ -1,0 +1,4 @@
+var flag : bool;
+flag := false;
+if (flag or false) then print ("Nice It Works !");
+else print ("it does not Work !");
