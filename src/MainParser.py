@@ -251,16 +251,6 @@ class Parser():
 
     def p_for(self, p):
         '''for : FOR IDENTIFIER EQUALS expr TO expr DO statement'''
-    
-    # print("({} , {} , {} ,)".format(p[3], (p[4]), (p[2])))
-    # print("(+ , {} , 1 , {})".format(p[2], (p[2])))
-    # print("({} , {} , {} , {}, {}, {}, {}, {},{})".format(
-    #     p[0], (p[1]), (p[2]), (p[3]), p[4], p[5], p[6], p[7], p[8]))  # 2
-    # print("({} , {} , {} , {}, {}, {}, {}, {},{})".format(p[0], (p[1]), (p[2]), (p[3]), p[4], p[5],p[6],p[7],p[8]))  # 2
-    # print("(> , {} , {}, 500)".format(p[2], p[6]))
-    # print("(JPF , 500 , after for address, )".format())
-    # print("( statement )".format())
-    # print("(JP , start of for, )".format())
 
     def p_call(self, p):
         '''call : CALL IDENTIFIER LPAREN args RPAREN SEMI'''

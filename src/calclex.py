@@ -41,9 +41,6 @@ class CalcLex(object):
         print("Illegal character '%s'" % t.value[0])
         t.lexer.skip(1)
 
-    # ----------------------------------------------------------------------
-    # Ignored comments and blank lines  ################################################################# yademon bashe nomre +
-
     # comment (/* ... */)
     def t_COMMENT(self, t):
         r"""/\*(.|\n)*?\*/"""
