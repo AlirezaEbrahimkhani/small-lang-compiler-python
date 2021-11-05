@@ -1,25 +1,24 @@
-import lexer
 import os
+import MainParser
 
 # main method
 def main():
-    
-    # Read the current flow source code in input.lang and store it in variable
-    content = ""
-    test_files = os.listdir("../tests/")
+    test_files = os.listdir("../tests")
     test_files.sort()
+    output = open("./output.lang", "w")
+    output2 = open("./output2.lang", "w")
+
     for file_name in test_files:
-        with open("../tests/{}".format(file_name) , 'r') as file:
+        with open("../tests/{}".format(file_name), 'r') as file:
+            output.write("============================= {}".format(file_name) + " =============================\n")
             content = file.read()
-        #
-        # Lexer
-        #
-            print("============================= {}".format(file_name)," =============================\n")
-        # Call the lexer class and initilize it with source code
-            main_lexer = lexer.Lexer(content)
-            lexer_result = list(main_lexer.lex())
-            
-            for result in lexer_result:
-                print(result , "\n")
-        
+            main_parser = MainParser.Parser()
+            main_parser.buildLexer()
+            result , pb = main_parser.build_parser(content)
+            output.write(str(result)+"\n")
+            output.write(str(main_parser.error_statement))
+            output2.write("============================= {}".format(file_name) + " =============================\n")
+            output2.write(pb+"\n")
+    output.close()
+
 main()

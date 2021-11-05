@@ -1,0 +1,169 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    ELSE
+    IF
+    THEN
+
+Grammar
+
+Rule 0     S' -> program
+Rule 1     program -> const_repeat var_repeat ex_procedure BEGIN circular_statement END SEMI
+Rule 2     ex_procedure -> circular_procedure
+Rule 3     ex_procedure -> <empty>
+Rule 4     circular_procedure -> procedure
+Rule 5     circular_procedure -> circular_procedure procedure
+Rule 6     circular_statement -> statement
+Rule 7     circular_statement -> circular_statement statement
+Rule 8     procedure -> PROCEDURE IDENTIFIER LPAREN circular_format RPAREN COLON block
+Rule 9     block -> BEGIN const_repeat var_repeat optional_statement END SEMI
+Rule 10    optional_statement -> statement
+Rule 11    optional_statement -> <empty>
+Rule 12    const_repeat -> circular_const
+Rule 13    const_repeat -> <empty>
+Rule 14    circular_const -> CONST const_decl
+Rule 15    circular_const -> circular_const CONST const_decl
+Rule 16    var_repeat -> circular_var
+Rule 17    var_repeat -> <empty>
+Rule 18    circular_var -> VAR var_decl
+Rule 19    circular_var -> circular_var VAR var_decl
+Rule 20    var_decl -> circular_id COLON type SEMI
+Rule 21    const_decl -> circular_id EQUALS NUMBER SEMI
+Rule 22    circular_format -> format
+Rule 23    circular_format -> circular_format COLON format
+Rule 24    circular_format -> <empty>
+Rule 25    format -> circular_id COLON mode type
+Rule 26    circular_id -> IDENTIFIER
+Rule 27    circular_id -> circular_id COMMA IDENTIFIER
+Rule 28    type -> INTEGER
+Rule 29    type -> STRINGTYPE
+Rule 30    type -> CHAR
+Rule 31    type -> FLOAT
+Rule 32    type -> DOUBLE
+Rule 33    type -> BOOLEAN
+Rule 34    mode -> IN
+Rule 35    mode -> OUT
+Rule 36    mode -> IN OUT
+Rule 37    mode -> <empty>
+Rule 38    statement -> print
+Rule 39    statement -> asgn
+Rule 40    statement -> read
+Rule 41    statement -> return
+Rule 42    statement -> call
+Rule 43    statement -> cond
+Rule 44    statement -> for
+Rule 45    bool -> NOT bool
+Rule 46    bool -> bool AND bool
+Rule 47    bool -> bool OR bool
+Rule 48    bool -> LPAREN bool RPAREN
+Rule 49    bool -> expr OPERATOR expr
+Rule 50    for -> FOR IDENTIFIER EQUALS expr TO expr DO statement
+Rule 51    call -> CALL IDENTIFIER LPAREN args RPAREN SEMI
+Rule 52    args -> expr
+Rule 53    args -> args COMMA expr
+Rule 54    args -> <empty>
+Rule 55    return -> RETURN SEMI
+Rule 56    read -> READ LPAREN var_value RPAREN SEMI
+Rule 57    var_value -> var
+Rule 58    var_value -> STRING
+Rule 59    var_value -> var_value COMMA var
+Rule 60    value -> expr
+Rule 61    value -> STRING
+Rule 62    value -> value COMMA expr
+Rule 63    print -> PRINT LPAREN value RPAREN SEMI
+Rule 64    asgn -> var EQUALS expr SEMI
+Rule 65    expr -> expr PLUS expr
+Rule 66    expr -> expr MINUS expr
+Rule 67    expr -> expr TIMES expr
+Rule 68    expr -> expr DIV expr
+Rule 69    expr -> MINUS expr
+Rule 70    expr -> NUMBER
+Rule 71    expr -> var
+Rule 72    expr -> LPAREN expr RPAREN
+Rule 73    var -> IDENTIFIER braket
+Rule 74    braket -> braket LBRAKET expr RBRAKET
+Rule 75    braket -> <empty>
+
+Terminals, with rules where they appear
+
+AND                  : 46
+BEGIN                : 1 9
+BOOLEAN              : 33
+CALL                 : 51
+CHAR                 : 30
+COLON                : 8 20 23 25
+COMMA                : 27 53 59 62
+CONST                : 14 15
+DIV                  : 68
+DO                   : 50
+DOUBLE               : 32
+ELSE                 : 
+END                  : 1 9
+EQUALS               : 21 50 64
+FLOAT                : 31
+FOR                  : 50
+IDENTIFIER           : 8 26 27 50 51 73
+IF                   : 
+IN                   : 34 36
+INTEGER              : 28
+LBRAKET              : 74
+LPAREN               : 8 48 51 56 63 72
+MINUS                : 66 69
+NOT                  : 45
+NUMBER               : 21 70
+OPERATOR             : 49
+OR                   : 47
+OUT                  : 35 36
+PLUS                 : 65
+PRINT                : 63
+PROCEDURE            : 8
+RBRAKET              : 74
+READ                 : 56
+RETURN               : 55
+RPAREN               : 8 48 51 56 63 72
+SEMI                 : 1 9 20 21 51 55 56 63 64
+STRING               : 58 61
+STRINGTYPE           : 29
+THEN                 : 
+TIMES                : 67
+TO                   : 50
+VAR                  : 18 19
+error                : 
+
+Nonterminals, with rules where they appear
+
+args                 : 51 53
+asgn                 : 39
+block                : 8
+bool                 : 45 46 46 47 47 48
+braket               : 73 74
+call                 : 42
+circular_const       : 12 15
+circular_format      : 8 23
+circular_id          : 20 21 25 27
+circular_procedure   : 2 5
+circular_statement   : 1 7
+circular_var         : 16 19
+cond                 : 43
+const_decl           : 14 15
+const_repeat         : 1 9
+ex_procedure         : 1
+expr                 : 49 49 50 50 52 53 60 62 64 65 65 66 66 67 67 68 68 69 72 74
+for                  : 44
+format               : 22 23
+mode                 : 25
+optional_statement   : 9
+print                : 38
+procedure            : 4 5
+program              : 0
+read                 : 40
+return               : 41
+statement            : 6 7 10 50
+type                 : 20 25
+value                : 62 63
+var                  : 57 59 64 71
+var_decl             : 18 19
+var_repeat           : 1 9
+var_value            : 56 59
+

@@ -1,0 +1,16 @@
+============================= test1.lang =============================
+None
+!! Error !! : Line(3) => Duplicate Identifier Definition ...!
+!! Error !! : Line(14) => Invalid variable assignment ...!
+!! Error !! : Line(16) => You should Define your variable ...!
+============================= test2.lang =============================
+None
+!! Error !! : Line(9) => Invalid variable assignment ...!
+!! Error !! : Line(11) => Invalid variable assignment ...!
+============================= test3.lang =============================
+None
+!! Error !! : Line(12) => You should Define your variable ...!
+============================= test4.lang =============================
+None
+============================= test5.lang =============================
+None
