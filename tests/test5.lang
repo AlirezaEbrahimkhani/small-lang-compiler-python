@@ -1,7 +1,9 @@
-procedure mult (i : in integer , j : in integer , result : out integer)
-begin
-result := i * j;
-return;
-end;
+const d , i := 6;
 
-call mult( 1 , 5 );
+begin
+    for compiler_project := 5 - 2 to 5 
+        do 
+            print("Compiler");
+    
+    read("s" ,a[2][3]);
+end;

@@ -1,8 +1,17 @@
-procedure sum (i : in integer, sum : out integer)
+const a , b ,c := 3;
 begin
-sum := 0;
-var s : integer;
-for s :=  0 to i do
-sum := sum  + i;
-return;
+    a := 2;
+    b := 3;
+    c := 5 + 1;
+
+    if a > c 
+        then
+            b := 3;
+        else
+            c := 5;
+    if b < c 
+        then 
+            a := 2;
+        else
+            b := 14;
 end;

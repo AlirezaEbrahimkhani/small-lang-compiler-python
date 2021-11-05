@@ -1,4 +1,12 @@
-var flag : bool;
-flag := false;
-if (flag or false) then print ("Nice It Works !");
-else print ("it does not Work !");
+var f ,h: boolean;
+
+begin
+    for temp := 2 to a * 4
+        do read("Test String" , a[2]);
+    print(2);
+    if a > b
+        then 
+            f := 5;
+        else
+            h := 4;
+end;
