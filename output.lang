@@ -1,0 +1,27 @@
+
+============================= test1.lang =============================
+None
+
+============================= test2.lang =============================
+None
+Exact P is LexToken(IDENTIFIER,'bool',1,11)
+Syntax error in input!
+
+============================= test3.lang =============================
+None
+Exact P is LexToken(COMMA,',',2,32)
+Syntax error in input!
+
+============================= test4.lang =============================
+None
+Exact P is LexToken(COMMA,',',1,29)
+Syntax error in input!
+Exact P is LexToken(VAR,'var',4,66)
+Syntax error in input!
+
+============================= test5.lang =============================
+None
+Exact P is LexToken(COMMA,',',1,31)
+Syntax error in input!
+Exact P is LexToken(CALL,'call',7,109)
+Syntax error in input!
