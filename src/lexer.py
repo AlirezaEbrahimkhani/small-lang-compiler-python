@@ -9,7 +9,7 @@ class Lexer:
     RE_IDENTIFIER = "^[a-zA-Z_]+[a-zA-Z0-9_]*"
     RE_NUMERAL = "[.0-9]"
     RE_OPERATOR = "(=)|(:=)|(<=)|(>=)|(>)|(<)|(<>)|(-)|(\+)|(/)|(\*)"
-    RE_SPCIAL_CHARACTERS = "[$&,:;=?@#\|'<>.^*()%!]"
+    RE_SPECIAL_CHARACTERS = "[$&,:;=?@#\|'<>.^*()%!]"
 
 
     def __init__(self, source_code):
@@ -43,7 +43,7 @@ class Lexer:
             else:
                 return("OPERATOR" , ret)
         
-        elif (re.match(self.RE_SPCIAL_CHARACTERS , ret)):
+        elif (re.match(self.RE_SPECIAL_CHARACTERS , ret)):
             return("SPECIAL_CHARACTER" , ret)
 
     # Read characters one by one
@@ -57,8 +57,8 @@ class Lexer:
             if c in " \n":
                 pass
             
-            elif re.match(self.RE_SPCIAL_CHARACTERS , c):
-                yield (self._scan(c,  chars , self.RE_SPCIAL_CHARACTERS))
+            elif re.match(self.RE_SPECIAL_CHARACTERS , c):
+                yield (self._scan(c,  chars , self.RE_SPECIAL_CHARACTERS))
                 
             elif re.match(self.RE_OPERATOR , c):
                 yield (self._scan(c,  chars , self.RE_OPERATOR))

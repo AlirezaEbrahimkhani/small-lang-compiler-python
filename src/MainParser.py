@@ -60,7 +60,7 @@ class Parser():
     t_OPERATOR = r"(=)|(<=)|(>=)|(>)|(<>)|(<)"
     t_EQUALS = r':='
     t_SEMI = r';'
-    #   t_SPCIAL_CHARACTERS = r"[$&?@#\|'.^%!]"
+    #   t_SPECIAL_CHARACTERS = r"[$&?@#\|'.^%!]"
     t_STRING = r"\".*\""
     t_ignore = ' \t'
     t_ignore_COMMENT = r'\#.*'

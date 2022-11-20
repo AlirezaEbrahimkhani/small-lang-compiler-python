@@ -7,7 +7,7 @@ class CalcLex(object):
     tokens = [
         'KEYWORD',
         'IDENTIFIER',
-        'SPCIAL_CHARACTERS',
+        'SPECIAL_CHARACTERS',
         'OPERATOR',
         'NUMBER',
         'STRING'
@@ -18,7 +18,7 @@ class CalcLex(object):
     # t_IDENTIFIER = r'^[a-zA-Z_]+[a-zA-Z0-9_]*'
     t_IDENTIFIER = r'[a-zA-Z_][a-zA-Z0-9_]*'
     t_OPERATOR = r"(=)|(:=)|(<=)|(>=)|(>)|(<)|(<>)|(-)|(\+)|(/)|(\*)"
-    t_SPCIAL_CHARACTERS = r"[$&,:;=?@#\|'<>.^*()%!]"
+    t_SPECIAL_CHARACTERS = r"[$&,:;=?@#\|'<>.^*()%!]"
     t_STRING = r"\".*\"" ################################################################# yademon bashe nomre +
 
     # A regular expression rule with some action code
