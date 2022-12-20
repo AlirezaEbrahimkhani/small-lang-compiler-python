@@ -1,4 +1,4 @@
-# Simple-Compiler-Python
+# Simple-Compiler-Python (Small lang grammer)
 
 Simple Compiler Project using Python Language 
 
